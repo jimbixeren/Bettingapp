@@ -10,42 +10,59 @@ namespace Bettingapp
     {
         public string? hometeam;
         public string? awayteam;
-        public int resutat;
+        public string? resutat;
+
+        Spiller spil = new Spiller();
 
 
-        public Prep(/*string aHometeam, string aAwayteam, int aResutat*/)
-
+        public void Tilføjhold(/*string aHometeam, string aAwayteam, int aResutat*/)
         {
             //hometeam = aHometeam;
             //awayteam = aAwayteam;
             //resutat = aResutat;
 
 
-            
-
-
             Console.WriteLine("Enter Hometeam");
             hometeam = Console.ReadLine();
 
-            
-
-
-
+           
             Console.WriteLine("Enter Awayteam");
             awayteam = Console.ReadLine();
 
-            Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper());
+            //Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper());
 
-
-            
-
-
-
-
-
-            Console.ReadLine();
 
         }
+
+        public void Visheader()
+        {
+            Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper());
+
+        }
+
+
+        public void Spilend()
+        {
+
+            Console.WriteLine("Angiv resutat");
+            resutat = Console.ReadLine();
+
+            if (resutat == spil.BetResult)
+            {
+                Console.WriteLine($"You have won " + "{ spil.Name}");
+
+
+            }else
+            {
+
+                Console.WriteLine($"you have lost" + "{ spil.Name}");
+            }
+
+
+
+        }
+
+
 
 
     }
