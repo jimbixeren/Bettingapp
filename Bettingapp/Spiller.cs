@@ -14,24 +14,14 @@ namespace Bettingapp
 
         //Prep prep = new Prep();
         //prep.Visheader();
-
-
-
-
-        
+ 
 
         public void Addspiller()
         {
 
-            
-
-
-
             List<Spiller> Spillerlist = new List<Spiller>();
 
             
-           
-
             bool moreplayers = true;
 
             while (moreplayers)

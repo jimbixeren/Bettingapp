@@ -49,13 +49,13 @@ namespace Bettingapp
 
             if (resutat == spil.BetResult)
             {
-                Console.WriteLine($"You have won " + "{ spil.Name}");
+                Console.WriteLine($"You have won " +  spil.Name);
 
 
             }else
             {
 
-                Console.WriteLine($"you have lost" + "{ spil.Name}");
+                Console.WriteLine($"you have lost" +  spil.Name);
             }
 
 
