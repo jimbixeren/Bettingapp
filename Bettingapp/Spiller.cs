@@ -10,17 +10,28 @@ namespace Bettingapp
     {
         public string? Name {get; set;}
         public int? Bet {get; set;}
-        public int BetResult { get; set;}
+        public String? BetResult { get; set;}
 
-        List<Spiller> Spillerlist = new List<Spiller>();
+        
 
         public void Addspiller()
         {
+
+            List<Spiller> Spillerlist = new List<Spiller>();
+
+
+
+            Console.WriteLine("Skriv: Navn" + " " + "Resutat" + " " + "Bet");
+
+
             Spillerlist.Add(new Spiller
             {
-                Name = Console.ReadLine(),
-                Bet = Convert.ToInt16( Console.ReadLine()),
-                BetResult = Convert.ToInt16(Console.ReadLine()),
+               
+
+                
+                Name = Console.ReadLine(),                
+                BetResult = Console.ReadLine(),
+                Bet = Convert.ToInt16(Console.ReadLine()),
 
 
 
@@ -28,7 +39,12 @@ namespace Bettingapp
 
             foreach(var Spiller in Spillerlist)
             {
-                Console.WriteLine(Name + " " + BetResult + " " + Bet);
+
+
+                Console.WriteLine("Name" + " " + Spiller.Name);
+                Console.WriteLine("Resutat" + " " + Spiller.BetResult);
+                Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");
+                Console.WriteLine("********************");
 
             }
 

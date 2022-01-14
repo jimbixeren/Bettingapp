@@ -16,6 +16,16 @@ namespace Bettingapp
             Prep prep = new Prep();
 
             Spiller spiller = new Spiller();
+            spiller.Addspiller();
+
+
+
+
+
+
+
+            Console.ReadLine();
+
         }
 
 
