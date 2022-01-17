@@ -12,14 +12,22 @@ namespace Bettingapp
         public int? Bet {get; set;}
         public String? BetResult { get; set;}
 
+        public string? Resutat { get; set;}
+
         //Prep prep = new Prep();
         //prep.Visheader();
- 
 
+        //public List<Spiller> Spillerlist = new List<Spiller>();
+        static List<Spiller> Spillerlist = new List<Spiller>();
+
+        public List<Spiller> GetList()
+        {
+            return Spillerlist;
+        }
         public void Addspiller()
         {
 
-            List<Spiller> Spillerlist = new List<Spiller>();
+           
 
             
             bool moreplayers = true;
@@ -67,6 +75,67 @@ namespace Bettingapp
                 Console.WriteLine("********************");
 
             }
+
+
+            //foreach (var Spiller in Spillerlist)
+            //{
+            //    Console.WriteLine("Angiv resutat");
+            //    Resutat = Console.ReadLine();
+
+            //    if (Resutat == BetResult)
+            //    {
+            //        Console.WriteLine($"You have won " + Name);
+
+
+            //    }
+            //    else
+            //    {
+
+            //        Console.WriteLine($"you have lost" + Name);
+            //    }
+
+
+
+
+
+
+
+            //    //Console.WriteLine("Name" + " " + Spiller.Name);
+            //    //Console.WriteLine("Resutat" + " " + Spiller.BetResult);
+            //    //Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");
+            //    //Console.WriteLine("********************");
+
+            //}
+
+
+
+
+
+
+            //public void Spilend()
+            //{
+
+            //    Console.WriteLine("Angiv resutat");
+            //    resutat = Console.ReadLine();
+
+            //    if (resutat == spiller.BetResult)
+            //    {
+            //        Console.WriteLine($"You have won " + spiller.Name);
+
+
+            //    }
+            //    else
+            //    {
+
+            //        Console.WriteLine($"you have lost" + spiller.Name);
+            //    }
+
+
+
+            //}
+
+
+
 
 
         }

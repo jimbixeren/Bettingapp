@@ -21,8 +21,8 @@ namespace Bettingapp
             
             spiller.Addspiller();
 
-            prep.Spilend();
-            
+            prep.Showlist();
+
 
 
 

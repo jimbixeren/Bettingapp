@@ -12,7 +12,8 @@ namespace Bettingapp
         public string? awayteam;
         public string? resutat;
 
-        Spiller spil = new Spiller();
+
+        //Spiller spiller = new Spiller();
 
 
         public void Tilføjhold(/*string aHometeam, string aAwayteam, int aResutat*/)
@@ -36,31 +37,51 @@ namespace Bettingapp
 
         public void Visheader()
         {
-            Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper());
+            Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper() + ":" + " " + resutat);
 
         }
 
 
-        public void Spilend()
+       
+
+        public void Showlist()
         {
+            Spiller spiller = new Spiller();
+
 
             Console.WriteLine("Angiv resutat");
             resutat = Console.ReadLine();
 
-            if (resutat == spil.BetResult)
-            {
-                Console.WriteLine($"You have won " +  spil.Name);
+            Visheader();
 
-
-            }else
+            foreach (var Spiller in spiller.GetList())
             {
 
-                Console.WriteLine($"you have lost" +  spil.Name);
+                //Spiller.BetResult
+
+                if (resutat == Spiller.BetResult)
+                {
+                    Console.WriteLine(Spiller.Name + ":" + " " + "won" + " " + Spiller.Bet);
+
+
+                }
+                else
+                {
+
+                    Console.WriteLine(Spiller.Name + ":" + " " + "Lost" + " " + Spiller.Bet);
+                }
+
+                //Console.WriteLine("Name" + " " + Spiller.Name);
+                //Console.WriteLine("Resutat" + " " + Spiller.BetResult);
+                //Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");
+                //Console.WriteLine("********************");
+
             }
 
 
-
         }
+
+
 
 
 
