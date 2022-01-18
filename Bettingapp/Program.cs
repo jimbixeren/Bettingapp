@@ -18,12 +18,9 @@ namespace Bettingapp
             prep.Tilføjresutat();
             prep.Visheader();
 
-            Spiller spiller = new Spiller();
-            
-            spiller.Addspiller();
-            
-            
 
+            Spiller spiller = new Spiller();            
+            spiller.Addspiller();                      
             prep.Showlist();
 
           
