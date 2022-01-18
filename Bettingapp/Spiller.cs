@@ -8,9 +8,9 @@ namespace Bettingapp
 {
     internal class Spiller 
     {
-        public string? Name {get; set;}
-        public String? BetResult { get; set;}
-        public string? Resutat { get; set;}
+        public string? name {get; set;}
+        public String? betResutat { get; set;}
+        public string? resutat { get; set;}
 
        
         // laver en static list som kan bruge i andre class
@@ -26,15 +26,15 @@ namespace Bettingapp
 
        
         // tilføjer spiller
-        public void Addspiller()
+        public void AddSpiller()
         {
 
            
 
             
-            bool moreplayers = true;
+            bool morePlayers = true;
 
-            while (moreplayers)
+            while (morePlayers)
             {
                 Console.WriteLine("Skriv: Navn" + " " + "Resutat");
 
@@ -43,8 +43,8 @@ namespace Bettingapp
                 Spillerlist.Add(new Spiller
                 {
 
-                    Name = Console.ReadLine(),
-                    BetResult = Console.ReadLine(),
+                    name = Console.ReadLine(),
+                    betResutat = Console.ReadLine(),
                     //Bet = Convert.ToInt16(Console.ReadLine()),
                     
 
@@ -57,12 +57,9 @@ namespace Bettingapp
 
                 if (userInput == "1")
                 {
-                    moreplayers = true;
+                    morePlayers = true;
                 }
                 else break;
-
-
-                
 
 
             }
@@ -79,8 +76,8 @@ namespace Bettingapp
                
 
 
-                Console.WriteLine("Name" + " " + Spiller.Name);
-                Console.WriteLine("Resutat" + " " + Spiller.BetResult);
+                Console.WriteLine("Name" + " " + Spiller.name);
+                Console.WriteLine("Resutat" + " " + Spiller.betResutat);
                 //Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");               
                 Console.WriteLine("********************");
 

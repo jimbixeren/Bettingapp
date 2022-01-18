@@ -13,14 +13,14 @@ namespace Bettingapp
         static void Main(string[] args)
         {
 
-            Prep prep = new Prep();
-            prep.Tilføjhold();
-            prep.Tilføjresutat();
-            prep.Visheader();
+            StartGame prep = new StartGame();
+            prep.TilføjHold();
+            prep.TilføjResutat();
+            prep.VisHeader();
 
 
             Spiller spiller = new Spiller();            
-            spiller.Addspiller();                      
+            spiller.AddSpiller();                      
             prep.Showlist();
 
           

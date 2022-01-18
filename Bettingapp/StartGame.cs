@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bettingapp
 {
-    internal class Prep
+    internal class StartGame
     {
-        public string? hometeam;
-        public string? awayteam;
+        public string? homeTeam;
+        public string? awayTeam;
         public string? resutat;
         public String? Betbeløb { get; set; }
 
@@ -18,19 +18,19 @@ namespace Bettingapp
 
 
         // tilføjer hold
-        public void Tilføjhold()
+        public void TilføjHold()
         {
             
             Console.WriteLine("Enter Hometeam");
-            hometeam = Console.ReadLine();
+            homeTeam = Console.ReadLine();
 
            
             Console.WriteLine("Enter Awayteam");
-            awayteam = Console.ReadLine();
+            awayTeam = Console.ReadLine();
 
 
         }
-        public void Tilføjresutat()
+        public void TilføjResutat()
         {
             Console.WriteLine("Tilføj bet beløb");
             Betbeløb = Console.ReadLine();
@@ -38,10 +38,10 @@ namespace Bettingapp
 
         }
 
-        public void Visheader()
+        public void VisHeader()
         {
-            Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper() + ":" + " " + resutat + " " + Betbeløb + "Kr." );
-
+            
+            Console.WriteLine($"{homeTeam.ToUpper()} VS { awayTeam.ToUpper()}: {resutat} {Betbeløb} Kr.");
         }
 
         public void Showlist()
@@ -54,23 +54,23 @@ namespace Bettingapp
             Console.WriteLine("Angiv resutat");
             resutat = Console.ReadLine();
 
-            Visheader();
+            VisHeader();
 
             foreach (var Spiller in spiller.GetList())
             {
 
                 
 
-                if (resutat == Spiller.BetResult)
+                if (resutat == Spiller.betResutat)
                 {
-                    Console.WriteLine(Spiller.Name + ":" + " " + "won" + ":" + Betbeløb + "Kr.");
+                    Console.WriteLine(Spiller.name + ":" + " " + "won" + ":" + Betbeløb + "Kr.");
 
 
                 }
                 else
                 {
 
-                    Console.WriteLine(Spiller.Name + ":" + " " + "Lost" + ":" + Betbeløb + "Kr.");
+                    Console.WriteLine(Spiller.name + ":" + " " + "Lost" + ":" + Betbeløb + "Kr.");
                 }
 
             }
