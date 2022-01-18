@@ -63,14 +63,16 @@ namespace Bettingapp
 
                 if (resutat == Spiller.betResutat)
                 {
-                    Console.WriteLine(Spiller.name + ":" + " " + "won" + ":" + Betbeløb + "Kr.");
+                    //Console.WriteLine(Spiller.name + ":" + " " + "won" + ":" + Betbeløb + "Kr.");
+                    Console.WriteLine($"{Spiller.name}: Won: {Betbeløb} Kr. ");
 
 
                 }
                 else
                 {
 
-                    Console.WriteLine(Spiller.name + ":" + " " + "Lost" + ":" + Betbeløb + "Kr.");
+                    //Console.WriteLine(Spiller.name + ":" + " " + "Lost" + ":" + Betbeløb + "Kr.");
+                    Console.WriteLine($"{Spiller.name}: Lost: {Betbeløb} Kr. ");
                 }
 
             }
