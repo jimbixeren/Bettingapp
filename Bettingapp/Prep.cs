@@ -11,18 +11,16 @@ namespace Bettingapp
         public string? hometeam;
         public string? awayteam;
         public string? resutat;
+        public String? Betbeløb { get; set; }
 
 
-       
 
 
-        public void Tilføjhold(/*string aHometeam, string aAwayteam, int aResutat*/)
+
+        // tilføjer hold
+        public void Tilføjhold()
         {
-            //hometeam = aHometeam;
-            //awayteam = aAwayteam;
-            //resutat = aResutat;
-
-
+            
             Console.WriteLine("Enter Hometeam");
             hometeam = Console.ReadLine();
 
@@ -30,22 +28,26 @@ namespace Bettingapp
             Console.WriteLine("Enter Awayteam");
             awayteam = Console.ReadLine();
 
-           
+
+        }
+        public void Tilføjresutat()
+        {
+            Console.WriteLine("Tilføj bet beløb");
+            Betbeløb = Console.ReadLine();
 
 
         }
 
         public void Visheader()
         {
-            Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper() + ":" + " " + resutat);
+            Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper() + ":" + " " + resutat + " " + Betbeløb + "Kr." );
 
         }
 
-
-
-
         public void Showlist()
         {
+
+            // Henter static list
             Spiller spiller = new Spiller();
 
 
@@ -57,18 +59,18 @@ namespace Bettingapp
             foreach (var Spiller in spiller.GetList())
             {
 
-                //Spiller.BetResult
+                
 
                 if (resutat == Spiller.BetResult)
                 {
-                    Console.WriteLine(Spiller.Name + ":" + " " + "won" + " " + Spiller.Bet);
+                    Console.WriteLine(Spiller.Name + ":" + " " + "won" + ":" + Betbeløb + "Kr.");
 
 
                 }
                 else
                 {
 
-                    Console.WriteLine(Spiller.Name + ":" + " " + "Lost" + " " + Spiller.Bet);
+                    Console.WriteLine(Spiller.Name + ":" + " " + "Lost" + ":" + Betbeløb + "Kr.");
                 }
 
             }
@@ -76,26 +78,7 @@ namespace Bettingapp
 
         }
 
-        //public void Betbeløb()
-        //{
-        //    Spiller spiller = new Spiller();
-
-        //    foreach (var Spiller in spiller.GetList())
-        //    {
-
-        //        //Spiller.BetResult
-
-        //        if (Spiller.Bet != Spiller.Bet)
-        //        {
-
-        //            Console.WriteLine("bet beløb skal være det samme");
-
-        //        }
-               
-
-        //    }
-
-        //}
+       
 
 
 

@@ -9,14 +9,15 @@ namespace Bettingapp
     internal class Spiller 
     {
         public string? Name {get; set;}
-        public int? Bet {get; set;}
         public String? BetResult { get; set;}
-
         public string? Resutat { get; set;}
 
        
+        // laver en static list som kan bruge i andre class
         static List<Spiller> Spillerlist = new List<Spiller>();
 
+
+        // metode der bruges til at vise list i andre class
         public List<Spiller> GetList()
         {
             return Spillerlist;
@@ -24,7 +25,7 @@ namespace Bettingapp
 
 
        
-
+        // tilføjer spiller
         public void Addspiller()
         {
 
@@ -35,7 +36,7 @@ namespace Bettingapp
 
             while (moreplayers)
             {
-                Console.WriteLine("Skriv: Navn" + " " + "Resutat" + " " + "Bet");
+                Console.WriteLine("Skriv: Navn" + " " + "Resutat");
 
 
 
@@ -44,22 +45,13 @@ namespace Bettingapp
 
                     Name = Console.ReadLine(),
                     BetResult = Console.ReadLine(),
-                    Bet = Convert.ToInt16(Console.ReadLine()),
+                    //Bet = Convert.ToInt16(Console.ReadLine()),
                     
 
                    
 
                 });
-                //if (Spiller.Bet != Spiller.Bet)
-                //{
-
-                //    Console.WriteLine("bet beløb skal være det samme" + "=" + Bet);
-
-                //}
-
-
-
-
+               
                 Console.WriteLine("Tilføj flere spillere? skriv '1' for ja, '2' for nej.");
                 string? userInput = Console.ReadLine();
 
@@ -81,7 +73,7 @@ namespace Bettingapp
 
 
 
-
+            // loper igennem list 
             foreach (var Spiller in Spillerlist)
             {
                
@@ -89,7 +81,7 @@ namespace Bettingapp
 
                 Console.WriteLine("Name" + " " + Spiller.Name);
                 Console.WriteLine("Resutat" + " " + Spiller.BetResult);
-                Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");
+                //Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");               
                 Console.WriteLine("********************");
 
             }
