@@ -14,16 +14,17 @@ namespace Bettingapp
 
         public string? Resutat { get; set;}
 
-        //Prep prep = new Prep();
-        //prep.Visheader();
-
-        //public List<Spiller> Spillerlist = new List<Spiller>();
+       
         static List<Spiller> Spillerlist = new List<Spiller>();
 
         public List<Spiller> GetList()
         {
             return Spillerlist;
         }
+
+
+       
+
         public void Addspiller()
         {
 
@@ -37,14 +38,25 @@ namespace Bettingapp
                 Console.WriteLine("Skriv: Navn" + " " + "Resutat" + " " + "Bet");
 
 
+
                 Spillerlist.Add(new Spiller
                 {
 
                     Name = Console.ReadLine(),
                     BetResult = Console.ReadLine(),
                     Bet = Convert.ToInt16(Console.ReadLine()),
+                    
+
+                   
 
                 });
+                //if (Spiller.Bet != Spiller.Bet)
+                //{
+
+                //    Console.WriteLine("bet beløb skal være det samme" + "=" + Bet);
+
+                //}
+
 
 
 
@@ -58,15 +70,21 @@ namespace Bettingapp
                 else break;
 
 
+                
+
+
             }
 
 
             
-            
+
+
+
+
 
             foreach (var Spiller in Spillerlist)
             {
-                
+               
 
 
                 Console.WriteLine("Name" + " " + Spiller.Name);
@@ -77,67 +95,8 @@ namespace Bettingapp
             }
 
 
-            //foreach (var Spiller in Spillerlist)
-            //{
-            //    Console.WriteLine("Angiv resutat");
-            //    Resutat = Console.ReadLine();
-
-            //    if (Resutat == BetResult)
-            //    {
-            //        Console.WriteLine($"You have won " + Name);
-
-
-            //    }
-            //    else
-            //    {
-
-            //        Console.WriteLine($"you have lost" + Name);
-            //    }
-
-
-
-
-
-
-
-            //    //Console.WriteLine("Name" + " " + Spiller.Name);
-            //    //Console.WriteLine("Resutat" + " " + Spiller.BetResult);
-            //    //Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");
-            //    //Console.WriteLine("********************");
-
-            //}
-
-
-
-
-
-
-            //public void Spilend()
-            //{
-
-            //    Console.WriteLine("Angiv resutat");
-            //    resutat = Console.ReadLine();
-
-            //    if (resutat == spiller.BetResult)
-            //    {
-            //        Console.WriteLine($"You have won " + spiller.Name);
-
-
-            //    }
-            //    else
-            //    {
-
-            //        Console.WriteLine($"you have lost" + spiller.Name);
-            //    }
-
-
-
-            //}
-
-
-
-
-
+            
         }
+       
     }
 }

@@ -13,7 +13,7 @@ namespace Bettingapp
         public string? resutat;
 
 
-        //Spiller spiller = new Spiller();
+       
 
 
         public void Tilføjhold(/*string aHometeam, string aAwayteam, int aResutat*/)
@@ -30,7 +30,7 @@ namespace Bettingapp
             Console.WriteLine("Enter Awayteam");
             awayteam = Console.ReadLine();
 
-            //Console.WriteLine(hometeam.ToUpper() + " " + "VS" + " " + awayteam.ToUpper());
+           
 
 
         }
@@ -42,7 +42,7 @@ namespace Bettingapp
         }
 
 
-       
+
 
         public void Showlist()
         {
@@ -71,15 +71,31 @@ namespace Bettingapp
                     Console.WriteLine(Spiller.Name + ":" + " " + "Lost" + " " + Spiller.Bet);
                 }
 
-                //Console.WriteLine("Name" + " " + Spiller.Name);
-                //Console.WriteLine("Resutat" + " " + Spiller.BetResult);
-                //Console.WriteLine("Bet" + " " + Spiller.Bet + "Kr.");
-                //Console.WriteLine("********************");
-
             }
 
 
         }
+
+        //public void Betbeløb()
+        //{
+        //    Spiller spiller = new Spiller();
+
+        //    foreach (var Spiller in spiller.GetList())
+        //    {
+
+        //        //Spiller.BetResult
+
+        //        if (Spiller.Bet != Spiller.Bet)
+        //        {
+
+        //            Console.WriteLine("bet beløb skal være det samme");
+
+        //        }
+               
+
+        //    }
+
+        //}
 
 
 

@@ -20,8 +20,12 @@ namespace Bettingapp
             Spiller spiller = new Spiller();
             
             spiller.Addspiller();
+            
+            
 
             prep.Showlist();
+
+          
 
 
 
